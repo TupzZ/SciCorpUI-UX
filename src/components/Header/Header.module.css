@@ -1,0 +1,64 @@
+.header {
+	height: 60px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: var(--primary-light);
+}
+
+.logoContainer {
+	width: 12%;
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	border-bottom: 1px solid var(--tertiary-light);
+	border-right: 1px solid var(--tertiary-light);
+}
+
+.logo {
+	width: auto;
+	height: 100%;
+}
+
+.linksContainer {
+	width: inherit;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	border-bottom: 1px solid var(--tertiary-light);
+}
+
+.headerLink {
+	margin-right: 2%;
+	color: var(--primary-dark);
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+
+.userContainer {
+	width: 12%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid var(--tertiary-light);
+	border-left: 1px solid var(--tertiary-light);
+}
+
+.userFrame {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--primary-green);
+	height: 3.7rem;
+	width: 3.7rem;
+	border-radius: 2rem;
+}
+
+.userIcon {
+	font-size: 1.3rem;
+	color: white;
+}
