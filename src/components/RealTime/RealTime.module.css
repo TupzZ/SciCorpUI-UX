@@ -1,0 +1,57 @@
+.container {
+	height: 40px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--secundary-light);
+}
+
+.containerClima,
+.containerUmidade,
+.containerVento,
+.containerEstacao {
+	height: 100%;
+	color: var(--tertiary-dark);
+	font-size: 0.7rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.containerClima,
+.containerUmidade,
+.containerVento {
+	width: 28%;
+	border-right: 1px solid var(--tertiary-light);
+}
+
+.containerEstacao {
+	width: 16%;
+}
+
+.estacaoName {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: var(--tertiary-dark);
+	border-bottom: 1px solid var(--tertiary-dark);
+}
+
+.icon {
+	font-size: 1.5rem;
+	margin-right: 2%;
+}
+
+.iconEstacao {
+	font-size: 1.5rem;
+}
+
+.iconVento {
+	font-size: 2rem;
+	margin-right: 2%;
+}
