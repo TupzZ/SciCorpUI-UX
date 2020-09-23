@@ -11,3 +11,7 @@ O header foi criado baseado no header do site da SciCorp®, fazendo apenas as al
 ## Componentes
 
 Foi criado um componente para cada sessão, com estilização moderna e visualização das principais informações sem ser necessário acessar a sessão
+
+## Barra de tempo real
+
+Para o monitoramento em tempo real
