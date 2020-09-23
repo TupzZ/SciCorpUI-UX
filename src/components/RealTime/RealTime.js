@@ -1,9 +1,22 @@
 import React from 'react';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import Icofont from 'react-icofont';
 import styles from './RealTime.module.css';
 
 const RealTime = (props) => {
+	let estacaoToggle = props.estacoes.map((estacao, index) => {
+		return props.selectedEstacao !== estacao.id ? (
+			<Dropdown.Item
+				className={styles.dropdownItem}
+				onClick={() => {
+					props.toggleEstacao(estacao.id);
+				}}
+			>
+				{estacao.cidade}/{estacao.estado}
+			</Dropdown.Item>
+		) : null;
+	});
+
 	return (
 		<div className={styles.container}>
 			<div onClick={props.clicked} className={styles.containerClima}>
@@ -29,23 +42,21 @@ const RealTime = (props) => {
 						id='dropdown-basic'
 					>
 						<div className={styles.buttonContent}>
-							<Icofont
-								className={styles.iconEstacao}
-								icon='google-map'
-							/>
-							<h1 className={styles.estacao}>São Paulo/SP</h1>
+							<div>
+								<Icofont
+									className={styles.iconEstacao}
+									icon='google-map'
+								/>
+							</div>
+							<h1 className={styles.estacao}>
+								{props.estacoes[props.selectedEstacao].cidade}/
+								{props.estacoes[props.selectedEstacao].estado}
+							</h1>
 						</div>
 					</Dropdown.Toggle>
-
-					<Dropdown.Menu>
-						<Dropdown.Item href='#/action-1'>Action</Dropdown.Item>
-						<Dropdown.Item href='#/action-2'>
-							Another action
-						</Dropdown.Item>
-						<Dropdown.Item href='#/action-3'>
-							Something else
-						</Dropdown.Item>
-					</Dropdown.Menu>
+					<div className={styles.dropdownMenu}>
+						<Dropdown.Menu>{estacaoToggle}</Dropdown.Menu>
+					</div>
 				</Dropdown>
 			</div>
 		</div>

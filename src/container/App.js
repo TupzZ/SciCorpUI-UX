@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Header from '../components/Header/Header';
 import RealTime from '../components/RealTime/RealTime';
-import styles from './App.module.css';
+// import styles from './App.module.css';
 
 class App extends Component {
 	state = {
@@ -20,8 +20,17 @@ class App extends Component {
 			'windy-night',
 			'tornado',
 		],
-		estacoes: ['São Paulo/SP', 'Cuiabá/MT', 'Campo Grande/MS'],
+		estacoes: [
+			{ cidade: 'São Paulo', estado: 'SP', id: 0 },
+			{ cidade: 'Cuiabá', estado: 'MT', id: 1 },
+			{ cidade: 'Campo Grande', estado: 'MS', id: 2 },
+		],
+		selectedEstacao: 0,
 		selectedWeather: 0,
+	};
+
+	toggleSelectedEstacao = (index) => {
+		this.setState({ selectedEstacao: index });
 	};
 
 	toggleWeatherIcon = () => {
@@ -34,18 +43,18 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className='App'>
+			<Fragment>
 				<Header />
 				<RealTime
+					selectedEstacao={this.state.selectedEstacao}
+					toggleEstacao={this.toggleSelectedEstacao}
+					estacoes={this.state.estacoes}
 					clicked={this.toggleWeatherIcon}
 					weatherIcon={
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
 				/>
-				<button onClick={this.toggleWeatherIcon}>
-					Toggle weather icon
-				</button>
-			</div>
+			</Fragment>
 		);
 	}
 }

@@ -18,29 +18,23 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-wrap: wrap;
-	flex-direction: row;
 }
 
 .containerClima,
 .containerUmidade,
 .containerVento {
-	width: 28%;
+	width: 27%;
 	border-right: 1px solid var(--tertiary-light);
 }
 
 .containerEstacao {
-	width: 16%;
+	width: 19%;
 }
 
 .estacaoName {
+	width: calc(100% + 20px);
 	border: none;
 	background: none;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
 	outline: none !important;
 }
 
@@ -55,22 +49,50 @@
 }
 
 .buttonContent {
-	min-width: 100px;
+	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	padding-bottom: 5%;
 	border-bottom: 1px solid var(--secundary-green);
 }
 
 .iconEstacao {
 	font-size: 1.7rem;
-	margin-right: 2%;
 	color: var(--secundary-green);
 }
 
 .estacao {
+	margin-left: 5%;
 	font-size: 1.2rem;
 	color: var(--secundary-green);
+}
+
+.dropdownItem {
+	font-size: 1.2rem;
+	display: block;
+	width: 100%;
+	padding: 1.5rem 1.5rem;
+	font-weight: 400;
+	color: var(--primary-dark);
+	background-color: var(--primary-light);
+	border-bottom: 1px solid var(--tertiary-light);
+	border-left: 1px solid var(--tertiary-light);
+	border-right: 1px solid var(--tertiary-light);
+}
+
+.dropdownItem:last-child {
+	border-radius: 0 0 15px 15px;
+}
+
+.dropdownItem:hover {
+	background-color: var(--secundary-light);
+}
+
+.dropdownMenu {
+	width: 100%;
+	display: flex;
+	align-items: center;
 }
