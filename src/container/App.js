@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from '../components/Header/Header';
 import RealTime from '../components/RealTime/RealTime';
 import styles from './App.module.css';
 
-function App() {
-	const state = {
+class App extends Component {
+	state = {
 		weatherIcons: [
 			'sun-alt',
 			'sunny',
@@ -21,14 +21,33 @@ function App() {
 			'tornado',
 		],
 		estacoes: ['São Paulo/SP', 'Cuiabá/MT', 'Campo Grande/MS'],
+		selectedWeather: 0,
 	};
 
-	return (
-		<div className='App'>
-			<Header />
-			<RealTime />
-		</div>
-	);
+	toggleWeatherIcon = () => {
+		this.setState({
+			selectedWeather: Math.floor(
+				Math.random() * this.state.weatherIcons.length
+			),
+		});
+	};
+
+	render() {
+		return (
+			<div className='App'>
+				<Header />
+				<RealTime
+					clicked={this.toggleWeatherIcon}
+					weatherIcon={
+						this.state.weatherIcons[this.state.selectedWeather]
+					}
+				/>
+				<button onClick={this.toggleWeatherIcon}>
+					Toggle weather icon
+				</button>
+			</div>
+		);
+	}
 }
 
 export default App;
