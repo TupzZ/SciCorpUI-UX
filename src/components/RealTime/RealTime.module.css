@@ -38,8 +38,8 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	color: var(--primary-green);
-	border-bottom: 1px solid var(--primary-green);
+	color: var(--secundary-green);
+	border-bottom: 1px solid var(--secundary-green);
 }
 
 .icon {
