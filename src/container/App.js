@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import Header from '../components/Header/Header';
 import RealTime from '../components/RealTime/RealTime';
-// import styles from './App.module.css';
+import Frame from '../components/Frame/Frame';
+import './App.css';
 
 class App extends Component {
 	state = {
@@ -54,6 +55,9 @@ class App extends Component {
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
 				/>
+				<Frame />
+				<Frame />
+				<Frame />
 			</Fragment>
 		);
 	}
