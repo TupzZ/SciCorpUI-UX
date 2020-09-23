@@ -10,14 +10,14 @@
 .frame {
 	height: 100%;
 	width: 80%;
-	border-top: 3px solid var(--primary-green);
-	border-bottom: 3px solid var(--primary-green);
-	background: rgb(254, 254, 254);
+	background: var(--gradient-green);
+	border-radius: 25px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
+	box-shadow: 4px 4px 7px var(--quaternary-light);
 }
 
 .frameTitle {
