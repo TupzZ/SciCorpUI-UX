@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Icofont from 'react-icofont';
 import styles from './Frame.module.css';
 
@@ -32,9 +33,9 @@ const Frame = (props) => {
 					</div>
 				</div>
 				<div className={styles.link}>
-					<a className={styles.moreInformation} href='/'>
+					<Link className={styles.moreInformation} to='/hiperlocal'>
 						CLIQUE PARA MAIS INFORMAÇÕES
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>

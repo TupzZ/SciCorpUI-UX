@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import Header from '../components/Header/Header';
 import RealTime from '../components/RealTime/RealTime';
 import Frame from '../components/Frame/Frame';
 import './App.css';
@@ -45,7 +44,6 @@ class App extends Component {
 	render() {
 		return (
 			<Fragment>
-				<Header />
 				<RealTime
 					selectedEstacao={this.state.selectedEstacao}
 					toggleEstacao={this.toggleSelectedEstacao}
