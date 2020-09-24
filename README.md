@@ -14,4 +14,4 @@ Foi criado um componente para cada sessão, com estilização moderna e visualiz
 
 ## Barra de tempo real
 
-Para o monitoramento em tempo real foi criado uma barra embaixo do header onde o usuário pode ver a temperatura e o tempo, a umidade e a velocidade do vento na estação selecionada. Para troca de estação será criado um menu dropdown em que sera possível selecionar a estação desejada, caso o usuário tenha mais de uma estação. Ao lado da estação será colocado uma anchor tag para o usuário ser redirecionado para a sessão da estação selecionada.
+Para o monitoramento em tempo real foi criado uma barra embaixo do header onde o usuário pode ver a temperatura e o tempo, a umidade e a velocidade do vento na estação selecionada. Para troca de estação será criado um menu dropdown em que sera possível selecionar a estação desejada, caso o usuário tenha mais de uma estação. <!--Ao lado da estação será colocado uma anchor tag para o usuário ser redirecionado para a sessão da estação selecionada.-->

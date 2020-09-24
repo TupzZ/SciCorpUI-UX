@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Icofont from 'react-icofont';
 import logo from '../../assets/images/logo-scicrop.png';
 import styles from './Header.module.css';
@@ -7,32 +8,32 @@ const Header = (props) => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.logoContainer}>
-				<a className={styles.logo} href='/'>
+				<Link className={styles.logo} to='/'>
 					<img
 						className={styles.logo}
 						src={logo}
 						alt='Logo SciCrop'
 					/>
-				</a>
+				</Link>
 			</div>
 			<div className={styles.linksContainer}>
-				<a href='/' className={styles.headerLink}>
+				<Link to='/' className={styles.headerLink}>
 					HOME
-				</a>
-				<a href='/estacoes' className={styles.headerLink}>
+				</Link>
+				<Link to='/estacoes' className={styles.headerLink}>
 					ESTAÇÕES
-				</a>
-				<a href='/hiperlocal' className={styles.headerLink}>
+				</Link>
+				<Link to='/hiperlocal' className={styles.headerLink}>
 					HIPERLOCAL
-				</a>
-				<a href='/dados-historicos' className={styles.headerLink}>
+				</Link>
+				<Link to='/dados-historicos' className={styles.headerLink}>
 					DADOS HISTÓRICOS
-				</a>
+				</Link>
 			</div>
 			<div className={styles.userContainer}>
-				<a href='/user' className={styles.userFrame}>
+				<Link to='/user' className={styles.userFrame}>
 					<Icofont className={styles.userIcon} icon='user-alt-7' />
-				</a>
+				</Link>
 			</div>
 		</header>
 	);
