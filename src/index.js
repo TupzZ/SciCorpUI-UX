@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import Header from './components/Header/Header';
-import App from './container/App';
+import Home from './container/Home';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 	<Router>
 		<Route path='/' component={Header} />
-		<Route exact path='/' component={App} />
+		<Route exact path='/' component={Home} />
 	</Router>,
 	document.getElementById('root')
 );

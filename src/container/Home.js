@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import RealTime from '../components/RealTime/RealTime';
 import Frame from '../components/Frame/Frame';
-import './App.css';
+import './Home.css';
 
-class App extends Component {
+class Home extends Component {
 	state = {
 		weatherIcons: [
 			'sun-alt',
@@ -61,4 +61,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default Home;
