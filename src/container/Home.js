@@ -24,22 +24,80 @@ class Home extends Component {
 			'windy',
 		],
 		estacoes: [
-			{ cidade: 'São Paulo', estado: 'SP', id: 0 },
-			{ cidade: 'Cuiabá', estado: 'MT', id: 1 },
-			{ cidade: 'Campo Grande', estado: 'MS', id: 2 },
+			{
+				id: 0,
+				cidade: 'São Paulo',
+				estado: 'SP',
+				numSerie: 25055,
+				status: 'Online',
+			},
+			{
+				id: 1,
+				cidade: 'Cuiabá',
+				estado: 'MT',
+				numSerie: 25055,
+				status: 'Offline',
+			},
+			{
+				id: 2,
+				cidade: 'Campo Grande',
+				estado: 'MS',
+				numSerie: 25055,
+				status: 'Online',
+			},
 		],
 		pages: [
 			{
 				name: 'Tempo Real',
 				slug: 'tempo-real',
-				data: {
-					temperature: 26,
-					umity: 80,
-					windSpeed: 20,
-				},
+				data: [
+					{ dataName: 'Temperatura', value: 26, metric: 'ºC' },
+					{ dataName: 'Umidade', value: 80, metric: '%' },
+					{
+						dataName: 'Velocidade do Vento',
+						value: 20,
+						metric: 'km/h',
+					},
+				],
 			},
-			{ name: 'Estações', slug: 'estacoes' },
-			{ name: 'Dados Históricos', slug: 'dados-historicos' },
+			{
+				name: 'Estações',
+				slug: 'estacoes',
+				data: [
+					{
+						dataName: 'Local',
+						value: 'Estação',
+						metric: false,
+					},
+					{
+						dataName: 'Número de série',
+						value: 252045,
+						metric: false,
+					},
+					{
+						dataName: 'Status da estação',
+						value: 'Online',
+						metric: false,
+					},
+				],
+			},
+			{
+				name: 'Dados históricos',
+				slug: 'dados-historicos',
+				data: [
+					{
+						dataName: 'Temperatura média',
+						value: 24.7,
+						metric: 'ºC',
+					},
+					{ dataName: 'Umidade média', value: 82.4, metric: '%' },
+					{
+						dataName: 'Velocidade do Vento média',
+						value: 14.6,
+						metric: 'km/h',
+					},
+				],
+			},
 		],
 		selectedEstacao: 0,
 		selectedWeather: 0,
@@ -77,6 +135,11 @@ class Home extends Component {
 				<Frame
 					clicked={this.toggleWeatherIcon}
 					pages={this.state.pages}
+					estacao={
+						this.state.estacoes[this.state.selectedEstacao].cidade +
+						'/' +
+						this.state.estacoes[this.state.selectedEstacao].estado
+					}
 					weatherIcon={
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
