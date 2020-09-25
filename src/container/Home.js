@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import RealTime from '../components/RealTime/RealTime';
 import Frame from '../components/Frame/Frame';
-import './Home.css';
+import styles from './Home.module.css';
 
 class Home extends Component {
 	state = {
@@ -28,6 +28,19 @@ class Home extends Component {
 			{ cidade: 'Cuiabá', estado: 'MT', id: 1 },
 			{ cidade: 'Campo Grande', estado: 'MS', id: 2 },
 		],
+		pages: [
+			{
+				name: 'Tempo Real',
+				slug: 'tempo-real',
+				data: {
+					temperature: 26,
+					umity: 80,
+					windSpeed: 20,
+				},
+			},
+			{ name: 'Estações', slug: 'estacoes' },
+			{ name: 'Dados Históricos', slug: 'dados-historicos' },
+		],
 		selectedEstacao: 0,
 		selectedWeather: 0,
 	};
@@ -46,7 +59,7 @@ class Home extends Component {
 
 	render() {
 		return (
-			<Fragment>
+			<div className={styles.App}>
 				<RealTime
 					selectedEstacao={this.state.selectedEstacao}
 					toggleEstacao={this.toggleSelectedEstacao}
@@ -56,25 +69,19 @@ class Home extends Component {
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
 				/>
+				<h1 id={styles.homeTitle}>
+					Estação:{' '}
+					{this.state.estacoes[this.state.selectedEstacao].cidade}/
+					{this.state.estacoes[this.state.selectedEstacao].estado}
+				</h1>
 				<Frame
 					clicked={this.toggleWeatherIcon}
+					pages={this.state.pages}
 					weatherIcon={
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
 				/>
-				<Frame
-					clicked={this.toggleWeatherIcon}
-					weatherIcon={
-						this.state.weatherIcons[this.state.selectedWeather]
-					}
-				/>
-				<Frame
-					clicked={this.toggleWeatherIcon}
-					weatherIcon={
-						this.state.weatherIcons[this.state.selectedWeather]
-					}
-				/>
-			</Fragment>
+			</div>
 		);
 	}
 }

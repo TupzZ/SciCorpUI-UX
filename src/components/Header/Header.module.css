@@ -15,6 +15,7 @@
 	justify-content: center;
 	border-bottom: 1px solid var(--tertiary-light);
 	border-right: 1px solid var(--tertiary-light);
+	outline: none !important;
 }
 
 .logo {

@@ -6,7 +6,7 @@ import wind from '../../assets/icons/wind.png';
 import styles from './RealTime.module.css';
 
 const RealTime = (props) => {
-	let estacaoToggle = props.estacoes.map((estacao, index) => {
+	const estacaoToggle = props.estacoes.map((estacao, index) => {
 		return props.selectedEstacao !== estacao.id ? (
 			<Dropdown.Item
 				className={styles.dropdownItem}
