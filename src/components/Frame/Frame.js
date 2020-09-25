@@ -48,7 +48,13 @@ const Frame = (props) => {
 					) : null}
 					<h2 className={styles.dataValue}>
 						{(data.value === 'Estação'
-							? props.estacao
+							? props.estacoes[props.selectedEstacao].cidade +
+							  '/' +
+							  props.estacoes[props.selectedEstacao].estado
+							: data.dataName === 'Número de série'
+							? props.estacoes[props.selectedEstacao].numSerie
+							: data.dataName === 'Status da estação'
+							? props.estacoes[props.selectedEstacao].status
 							: data.value) + (data.metric ? data.metric : '')}
 					</h2>
 				</div>

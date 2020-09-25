@@ -35,14 +35,14 @@ class Home extends Component {
 				id: 1,
 				cidade: 'Cuiabá',
 				estado: 'MT',
-				numSerie: 25055,
+				numSerie: 25056,
 				status: 'Offline',
 			},
 			{
 				id: 2,
 				cidade: 'Campo Grande',
 				estado: 'MS',
-				numSerie: 25055,
+				numSerie: 25057,
 				status: 'Online',
 			},
 		],
@@ -127,19 +127,11 @@ class Home extends Component {
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
 				/>
-				<h1 id={styles.homeTitle}>
-					Estação:{' '}
-					{this.state.estacoes[this.state.selectedEstacao].cidade}/
-					{this.state.estacoes[this.state.selectedEstacao].estado}
-				</h1>
 				<Frame
 					clicked={this.toggleWeatherIcon}
 					pages={this.state.pages}
-					estacao={
-						this.state.estacoes[this.state.selectedEstacao].cidade +
-						'/' +
-						this.state.estacoes[this.state.selectedEstacao].estado
-					}
+					estacoes={this.state.estacoes}
+					selectedEstacao={this.state.selectedEstacao}
 					weatherIcon={
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
