@@ -45,9 +45,11 @@
 }
 
 .dataTitle {
+	height: 5rem;
+	width: auto;
 	font-size: 3rem;
 	color: var(--secundary-dark);
-	margin-bottom: 10%;
+	margin-bottom: 2rem;
 }
 
 .dataValue {
@@ -56,8 +58,9 @@
 }
 
 .dataIcon {
-	font-size: 7rem;
-	color: var(--tertiary-dark);
+	height: 7rem;
+	width: auto;
+	margin-bottom: 2rem;
 }
 
 .divider {

@@ -39,7 +39,8 @@
 }
 
 .icon {
-	font-size: 2.5rem;
+	height: 2.5rem;
+	width: auto;
 	margin-right: 2%;
 }
 

@@ -6,19 +6,22 @@ import './Home.css';
 class Home extends Component {
 	state = {
 		weatherIcons: [
-			'sun-alt',
-			'sunny',
-			'rainy-sunny',
-			'hail-rainy',
-			'rainy-thunder',
-			'rainy',
-			'rainy-night',
-			'windy-raining',
-			'windy-thunder-raining',
+			'sun',
+			'clouds',
+			'wet',
+			'fog',
+			'haze',
+			'full-moon',
+			'hail',
 			'night',
-			'full-night',
-			'windy-night',
+			'party-cloud',
+			'rain-cloud',
+			'rain',
+			'storm',
+			'stormy',
 			'tornado',
+			'torrential',
+			'windy',
 		],
 		estacoes: [
 			{ cidade: 'São Paulo', estado: 'SP', id: 0 },
@@ -53,9 +56,24 @@ class Home extends Component {
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
 				/>
-				<Frame />
-				<Frame />
-				<Frame />
+				<Frame
+					clicked={this.toggleWeatherIcon}
+					weatherIcon={
+						this.state.weatherIcons[this.state.selectedWeather]
+					}
+				/>
+				<Frame
+					clicked={this.toggleWeatherIcon}
+					weatherIcon={
+						this.state.weatherIcons[this.state.selectedWeather]
+					}
+				/>
+				<Frame
+					clicked={this.toggleWeatherIcon}
+					weatherIcon={
+						this.state.weatherIcons[this.state.selectedWeather]
+					}
+				/>
 			</Fragment>
 		);
 	}

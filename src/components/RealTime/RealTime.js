@@ -1,6 +1,8 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
 import Icofont from 'react-icofont';
+import wet from '../../assets/icons/wet.png';
+import wind from '../../assets/icons/wind.png';
 import styles from './RealTime.module.css';
 
 const RealTime = (props) => {
@@ -20,18 +22,21 @@ const RealTime = (props) => {
 	return (
 		<div className={styles.container}>
 			<div onClick={props.clicked} className={styles.containerClima}>
-				<Icofont
+				<img
 					className={styles.icon}
-					icon={props.weatherIcon}
-				></Icofont>
+					src={require('../../assets/icons/' +
+						props.weatherIcon +
+						'.png')}
+					alt='Weather Icon'
+				/>
 				<h1 className={styles.climaData}>26ºC Limpo</h1>
 			</div>
 			<div className={styles.containerUmidade}>
-				<Icofont className={styles.icon} icon='water-drop'></Icofont>
+				<img className={styles.icon} src={wet} alt='Umity Icon' />
 				<h1 className={styles.umidadeData}>80%</h1>
 			</div>
 			<div className={styles.containerVento}>
-				<Icofont className={styles.iconVento} icon='wind'></Icofont>
+				<img className={styles.icon} src={wind} alt='Wind Icon' />
 				<h1 className={styles.ventoData}>20km/h</h1>
 			</div>
 			<div className={styles.containerEstacao}>
