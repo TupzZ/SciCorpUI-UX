@@ -1,0 +1,46 @@
+.footer {
+	margin-top: 2%;
+	background-color: var(--primary-dark);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 17vh;
+	padding: 1% 10%;
+}
+
+.imgContainer {
+	height: 80%;
+	width: 25%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.img {
+	height: 20%;
+	width: auto;
+}
+
+.infoContainer {
+	height: 100%;
+	width: 75%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	flex-direction: column;
+	font-family: 'Lato';
+	color: #b3b4b5;
+}
+
+.info {
+	font-size: 1.5rem;
+}
+
+.info:last-child {
+	margin-top: 2%;
+}
+
+.link {
+	color: #1abc9c;
+}
