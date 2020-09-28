@@ -4,7 +4,7 @@ import styles from './Container.module.css';
 
 const Container = (props) => {
 	const ContianerDiv = styled.div`
-		height: ${props.height === undefined ? 'auto' : props.height};
+		height: auto;
 		width: 80%;
 		padding-bottom: 2%;
 		margin: 2.5% 0;

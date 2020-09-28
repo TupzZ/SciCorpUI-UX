@@ -174,8 +174,14 @@ class Estacoes extends Component {
 					}
 				/>
 				<div className={styles.container}>
-					<Container title='Mapa das estações' height='65vh'>
-						<Mapa defaultCenter={this.state.defaultCenter} />
+					<Container title='Mapa das estações'>
+						<Mapa
+							defaultCenter={this.state.defaultCenter}
+							estacoes={this.state.estacoes}
+							clicked={this.toggleOpen}
+							openInfoWindow={this.state.openInfoWindowId}
+							isOpen={this.state.isOpen}
+						/>
 					</Container>
 					<Container title='Situação das estações'>
 						<Status
