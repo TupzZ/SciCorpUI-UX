@@ -1,0 +1,75 @@
+.table {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+.tableHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 96%;
+	background-color: var(--tertiary-dark);
+}
+
+.tableHeaderData {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--primary-light);
+	font-size: 1.6rem;
+	padding: 2% 2%;
+}
+
+.rowContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	width: 96%;
+}
+
+.orderButton {
+	border: none;
+	background-color: inherit;
+	color: var(--primary-green);
+	cursor: pointer;
+	margin-left: 4%;
+	outline: none !important;
+	font-size: 2rem;
+}
+
+.tableRow {
+	display: flex;
+	justify-content: center;
+	width: 96%;
+	border: 1px solid var(--quinary-light);
+	border-top: 0;
+	font-size: 1.7rem;
+}
+
+.oddRow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
+	background-color: var(--secundary-light);
+	border-right: 1px solid var(--tertiary-light);
+	padding: 2% 2%;
+}
+
+.evenRow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20%;
+	padding: 2% 2%;
+	border-right: 1px solid var(--tertiary-light);
+}

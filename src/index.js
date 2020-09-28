@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import Estacoes from './components/Estacoes/Estacoes';
-import Home from './container/Home';
+import Estacoes from './container/Estacoes/Estacoes';
+import Home from './container/Home/Home';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

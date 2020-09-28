@@ -9,6 +9,7 @@ const RealTime = (props) => {
 	const estacaoToggle = props.estacoes.map((estacao, index) => {
 		return props.selectedEstacao !== estacao.id ? (
 			<Dropdown.Item
+				key={index}
 				className={styles.dropdownItem}
 				onClick={() => {
 					props.toggleEstacao(estacao.id);

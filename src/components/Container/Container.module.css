@@ -1,0 +1,12 @@
+.containerHeader {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 2% 2%;
+	margin-bottom: 2%;
+	background-color: var(--secundary-dark);
+	color: var(--tertiary-light);
+	font-size: 2rem;
+	height: 5%;
+	width: 100%;
+}

@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
-import RealTime from '../components/RealTime/RealTime';
-import Frame from '../components/Frame/Frame';
-import styles from './Home.module.css';
+import React, { Component, Fragment } from 'react';
+import Container from '../../components/Container/Container';
+import Mapa from '../../components/Mapa/Mapa';
+import Status from '../../components/Status/Status';
+import RealTime from '../../components/RealTime/RealTime';
+import styles from './Estacoes.module.css';
 
-class Home extends Component {
+class Estacoes extends Component {
 	state = {
 		weatherIcons: [
 			'sun',
@@ -28,22 +30,34 @@ class Home extends Component {
 				id: 0,
 				cidade: 'São Paulo',
 				estado: 'SP',
+				lat: -23.56918,
+				lng: -46.6918237,
 				numSerie: 25055,
-				status: 'Online',
+				statusExterno: 'Online',
+				statusInterno: 'Online',
+				autoVer: '27/09/2020 - 13:45:54',
 			},
 			{
 				id: 1,
 				cidade: 'Cuiabá',
 				estado: 'MT',
+				lat: -15.6142309,
+				lng: -56.1118468,
 				numSerie: 25056,
-				status: 'Offline',
+				statusExterno: 'Online',
+				statusInterno: 'Online',
+				autoVer: '27/09/2020 - 13:45:54',
 			},
 			{
 				id: 2,
 				cidade: 'Campo Grande',
 				estado: 'MS',
+				lat: -20.480925,
+				lng: -54.7055738,
 				numSerie: 25057,
-				status: 'Online',
+				statusExterno: 'Online',
+				statusInterno: 'Online',
+				autoVer: '27/09/2020 - 13:45:54',
 			},
 		],
 		pages: [
@@ -101,10 +115,24 @@ class Home extends Component {
 		],
 		selectedEstacao: 0,
 		selectedWeather: 0,
+		tableOrder: true,
+		defaultCenter: {},
+	};
+
+	orderSerie = (a, b) => {
+		return this.state.tableOrder
+			? a.numSerie - b.numSerie
+			: b.numSerie - a.numSerie;
+	};
+
+	toggleOrder = () => {
+		this.setState({ tableOrder: !this.state.tableOrder });
 	};
 
 	toggleSelectedEstacao = (index) => {
 		this.setState({ selectedEstacao: index });
+
+		this.selectedEstacao();
 	};
 
 	toggleWeatherIcon = () => {
@@ -115,9 +143,23 @@ class Home extends Component {
 		});
 	};
 
+	selectedEstacao = () => {
+		this.setState({
+			defaultCenter: {
+				lat: this.state.estacoes[this.state.selectedEstacao].lat,
+				lng: this.state.estacoes[this.state.selectedEstacao].lng,
+			},
+		});
+	};
+
+	componentDidMount() {
+		this.selectedEstacao();
+		this.state.estacoes.sort(this.orderSerie);
+	}
+
 	render() {
 		return (
-			<div className={styles.App}>
+			<Fragment>
 				<RealTime
 					selectedEstacao={this.state.selectedEstacao}
 					toggleEstacao={this.toggleSelectedEstacao}
@@ -127,18 +169,21 @@ class Home extends Component {
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
 				/>
-				<Frame
-					clicked={this.toggleWeatherIcon}
-					pages={this.state.pages}
-					estacoes={this.state.estacoes}
-					selectedEstacao={this.state.selectedEstacao}
-					weatherIcon={
-						this.state.weatherIcons[this.state.selectedWeather]
-					}
-				/>
-			</div>
+				<div className={styles.container}>
+					<Container title='Mapa das estações' height='65vh'>
+						<Mapa defaultCenter={this.state.defaultCenter} />
+					</Container>
+					<Container title='Situação das estações'>
+						<Status
+							selectedOrder={this.state.tableOrder}
+							toggleOrder={this.toggleOrder}
+							estacoes={this.state.estacoes.sort(this.orderSerie)}
+						/>
+					</Container>
+				</div>
+			</Fragment>
 		);
 	}
 }
 
-export default Home;
+export default Estacoes;
