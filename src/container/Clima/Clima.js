@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import RealTimeBar from '../../components/RealTimeBar/RealTimeBar';
-import Frame from '../../components/Frame/Frame';
-import styles from './Home.module.css';
+import Hiperlocal from '../../components/Hiperlocal/Hiperlocal';
+import styles from './Clima.module.css';
 
-class Home extends Component {
+class Clima extends Component {
 	state = {
 		weatherIcons: [
 			'sun',
@@ -37,6 +36,7 @@ class Home extends Component {
 				temp: 26,
 				umity: 60,
 				velWind: 15,
+				windDirection: 'S',
 				rain: 5,
 				radiation: 240,
 				uv: 5,
@@ -54,6 +54,7 @@ class Home extends Component {
 				temp: 32,
 				umity: 40,
 				velWind: 10,
+				windDirection: 'S',
 				rain: 0,
 				radiation: 400,
 				uv: 8,
@@ -71,6 +72,7 @@ class Home extends Component {
 				temp: 36,
 				umity: 15,
 				velWind: 5,
+				windDirection: 'S',
 				rain: 2,
 				radiation: 450,
 				uv: 8,
@@ -78,8 +80,8 @@ class Home extends Component {
 		],
 		pages: [
 			{
-				name: 'Clima',
-				slug: 'clima',
+				name: 'Tempo Real',
+				slug: 'tempo-real',
 				data: [
 					{ dataName: 'Temperatura', value: 26, metric: 'ºC' },
 					{ dataName: 'Umidade', value: 80, metric: '%' },
@@ -147,21 +149,13 @@ class Home extends Component {
 
 	render() {
 		return (
-			<div className={styles.App}>
-				<RealTimeBar
+			<div className={styles.RealTime}>
+				<Hiperlocal
+					estacoes={this.state.estacoes}
 					selectedEstacao={this.state.selectedEstacao}
+					showEstacao={this.showEstacao}
 					toggleEstacao={this.toggleSelectedEstacao}
-					estacoes={this.state.estacoes}
 					clicked={this.toggleWeatherIcon}
-					weatherIcon={
-						this.state.weatherIcons[this.state.selectedWeather]
-					}
-				/>
-				<Frame
-					clicked={this.toggleWeatherIcon}
-					pages={this.state.pages}
-					estacoes={this.state.estacoes}
-					selectedEstacao={this.state.selectedEstacao}
 					weatherIcon={
 						this.state.weatherIcons[this.state.selectedWeather]
 					}
@@ -171,4 +165,4 @@ class Home extends Component {
 	}
 }
 
-export default Home;
+export default Clima;

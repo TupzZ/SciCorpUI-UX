@@ -13,6 +13,7 @@ const Container = (props) => {
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		border-radius: 15px;
 	`;
 
 	return (

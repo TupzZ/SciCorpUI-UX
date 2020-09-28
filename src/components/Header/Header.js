@@ -23,8 +23,8 @@ const Header = (props) => {
 				<Link to='/estacoes' className={styles.headerLink}>
 					ESTAÇÕES
 				</Link>
-				<Link to='/tempo-real' className={styles.headerLink}>
-					TEMPO REAL
+				<Link to='/clima' className={styles.headerLink}>
+					CLIMA
 				</Link>
 				<Link to='/dados-historicos' className={styles.headerLink}>
 					DADOS HISTÓRICOS
