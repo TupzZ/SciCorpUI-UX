@@ -11,12 +11,12 @@ const Status = (props) => {
 				<div
 					className={index % 2 === 0 ? styles.oddRow : styles.evenRow}
 				>
-					{data.numSerie}
+					<span>{data.numSerie}</span>
 				</div>
 				<div
 					className={index % 2 === 0 ? styles.oddRow : styles.evenRow}
 				>
-					{data.cidade}
+					<span>{data.cidade}</span>
 				</div>
 				<div
 					className={
@@ -24,7 +24,15 @@ const Status = (props) => {
 						index % 2 === 0 ? styles.oddRow : styles.evenRow)
 					}
 				>
-					{data.statusExterno}
+					<span
+						className={
+							data.statusExterno === 'Online'
+								? styles.online
+								: styles.offline
+						}
+					>
+						{data.statusExterno}
+					</span>
 				</div>
 				<div
 					className={
@@ -32,12 +40,20 @@ const Status = (props) => {
 						index % 2 === 0 ? styles.oddRow : styles.evenRow)
 					}
 				>
-					{data.statusInterno}
+					<span
+						className={
+							data.statusInterno === 'Online'
+								? styles.online
+								: styles.offline
+						}
+					>
+						{data.statusInterno}
+					</span>
 				</div>
 				<div
 					className={index % 2 === 0 ? styles.oddRow : styles.evenRow}
 				>
-					{data.autoVer}
+					<span>{data.autoVer}</span>
 				</div>
 			</div>
 		);

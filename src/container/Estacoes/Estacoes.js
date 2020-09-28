@@ -34,7 +34,7 @@ class Estacoes extends Component {
 				lng: -46.6918237,
 				numSerie: 25055,
 				statusExterno: 'Online',
-				statusInterno: 'Online',
+				statusInterno: 'Offline',
 				autoVer: '27/09/2020 - 13:45:54',
 			},
 			{
@@ -46,7 +46,7 @@ class Estacoes extends Component {
 				numSerie: 25056,
 				statusExterno: 'Online',
 				statusInterno: 'Online',
-				autoVer: '27/09/2020 - 13:45:54',
+				autoVer: '25/09/2020 - 17:40:04',
 			},
 			{
 				id: 2,
@@ -55,9 +55,9 @@ class Estacoes extends Component {
 				lat: -20.480925,
 				lng: -54.7055738,
 				numSerie: 25057,
-				statusExterno: 'Online',
+				statusExterno: 'Offline',
 				statusInterno: 'Online',
-				autoVer: '27/09/2020 - 13:45:54',
+				autoVer: '26/09/2020 - 03:17:32',
 			},
 		],
 		pages: [
@@ -125,6 +125,10 @@ class Estacoes extends Component {
 			: b.numSerie - a.numSerie;
 	};
 
+	estacoesStatus = (estacoes) => {
+		return [...estacoes];
+	};
+
 	toggleOrder = () => {
 		this.setState({ tableOrder: !this.state.tableOrder });
 	};
@@ -154,7 +158,7 @@ class Estacoes extends Component {
 
 	componentDidMount() {
 		this.selectedEstacao();
-		this.state.estacoes.sort(this.orderSerie);
+		this.estacoesStatus(this.state.estacoes).sort(this.orderSerie);
 	}
 
 	render() {
@@ -177,7 +181,9 @@ class Estacoes extends Component {
 						<Status
 							selectedOrder={this.state.tableOrder}
 							toggleOrder={this.toggleOrder}
-							estacoes={this.state.estacoes.sort(this.orderSerie)}
+							estacoes={this.estacoesStatus(
+								this.state.estacoes
+							).sort(this.orderSerie)}
 						/>
 					</Container>
 				</div>

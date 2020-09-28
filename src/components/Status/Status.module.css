@@ -73,3 +73,17 @@
 	padding: 2% 2%;
 	border-right: 1px solid var(--tertiary-light);
 }
+
+.online {
+	color: var(--primary-light);
+	background-color: var(--primary-cyan);
+	border-radius: 5px;
+	padding: 5% 10%;
+}
+
+.offline {
+	color: var(--primary-light);
+	background-color: var(--primary-red);
+	border-radius: 5px;
+	padding: 5% 10%;
+}
