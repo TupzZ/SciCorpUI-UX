@@ -3,9 +3,9 @@ import { Dropdown } from 'react-bootstrap';
 import Icofont from 'react-icofont';
 import wet from '../../assets/icons/wet.png';
 import wind from '../../assets/icons/wind.png';
-import styles from './RealTime.module.css';
+import styles from './RealTimeBar.module.css';
 
-const RealTime = (props) => {
+const RealTimeBar = (props) => {
 	const estacaoToggle = props.estacoes.map((estacao, index) => {
 		return props.selectedEstacao !== estacao.id ? (
 			<Dropdown.Item
@@ -69,4 +69,4 @@ const RealTime = (props) => {
 	);
 };
 
-export default RealTime;
+export default RealTimeBar;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RealTime from '../../components/RealTime/RealTime';
+import RealTimeBar from '../../components/RealTimeBar/RealTimeBar';
 import Frame from '../../components/Frame/Frame';
 import styles from './Home.module.css';
 
@@ -118,7 +118,7 @@ class Home extends Component {
 	render() {
 		return (
 			<div className={styles.App}>
-				<RealTime
+				<RealTimeBar
 					selectedEstacao={this.state.selectedEstacao}
 					toggleEstacao={this.toggleSelectedEstacao}
 					estacoes={this.state.estacoes}

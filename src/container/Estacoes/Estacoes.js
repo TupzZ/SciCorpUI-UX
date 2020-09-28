@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Container from '../../components/Container/Container';
 import Mapa from '../../components/Mapa/Mapa';
 import Status from '../../components/Status/Status';
-import RealTime from '../../components/RealTime/RealTime';
+import RealTimeBar from '../../components/RealTimeBar/RealTimeBar';
 import styles from './Estacoes.module.css';
 
 class Estacoes extends Component {
@@ -164,7 +164,7 @@ class Estacoes extends Component {
 	render() {
 		return (
 			<Fragment>
-				<RealTime
+				<RealTimeBar
 					selectedEstacao={this.state.selectedEstacao}
 					toggleEstacao={this.toggleSelectedEstacao}
 					estacoes={this.state.estacoes}
