@@ -145,9 +145,10 @@ const Hiperlocal = (props) => {
 		</div>
 	);
 
-	const resumePrevisao = (data, metric, titles, icons) => {
+	const resumePrevisao = (data, metric, titles, icons, title) => {
 		return (
 			<div className={styles.contentContainer}>
+				<span className={styles.previsaoTitle}>{title}</span>
 				<div className={styles.previsaoContainer}>
 					<div className={styles.previsao}>
 						<span className={styles.previsaoData}>
@@ -230,13 +231,18 @@ const Hiperlocal = (props) => {
 					{
 						firstValue: 'long-arrow-down',
 						secondValue: 'long-arrow-up',
-					}
+					},
+					'Previsão de temperatura'
 				)}
-				<LineChart title='Previsão de temperatura (em ºC)' />
+				<LineChart
+					title='Previsão de temperatura (em ºC)'
+					data={{ colorPrim: '255, 206, 8', colorSec: '237, 182, 0' }}
+				/>
 				{resumePrevisao(
 					{
 						firstValue: props.estacoes[props.selectedEstacao].rain,
-						secondValue: 90,
+						secondValue:
+							props.estacoes[props.selectedEstacao].probRain,
 					},
 					{ firstValue: 'mm', secondValue: '%' },
 					{
@@ -246,9 +252,77 @@ const Hiperlocal = (props) => {
 					{
 						firstValue: 'water-drop',
 						secondValue: false,
-					}
+					},
+					'Previsão de chuva'
 				)}
-				<BarChart title='Previsão de chuva (em mm)' />
+				<BarChart
+					title='Previsão de chuva (em mm)'
+					data={{
+						first:
+							props.estacoes[props.selectedEstacao].rain === 5
+								? 1
+								: props.estacoes[props.selectedEstacao].rain ===
+								  2
+								? 1
+								: 0,
+						second:
+							props.estacoes[props.selectedEstacao].rain === 5
+								? 2
+								: 0,
+						third:
+							props.estacoes[props.selectedEstacao].rain === 5
+								? 1
+								: props.estacoes[props.selectedEstacao].rain ===
+								  2
+								? 1
+								: 0,
+						fourth:
+							props.estacoes[props.selectedEstacao].rain === 5
+								? 1
+								: 0,
+						maxTick:
+							props.estacoes[props.selectedEstacao].rain === 5
+								? 5
+								: props.estacoes[props.selectedEstacao].rain ===
+								  2
+								? 3
+								: 2,
+					}}
+				/>
+				{resumePrevisao(
+					{ firstValue: 15, secondValue: 30 },
+					{ firstValue: 'km/h', secondValue: 'km/h' },
+					{ firstValue: 'Mínima', secondValue: 'Máxima' },
+					{
+						firstValue: false,
+						secondValue: false,
+					},
+					'Previsão de intensidade do vento'
+				)}
+				<LineChart
+					title='Previsão da intensidade do vento (em km/h)'
+					data={{
+						colorPrim: '140, 207, 134',
+						colorSec: '99, 199, 103',
+					}}
+				/>
+				{resumePrevisao(
+					{ firstValue: 25, secondValue: 67 },
+					{ firstValue: '%', secondValue: '%' },
+					{ firstValue: 'Mínima', secondValue: 'Máxima' },
+					{
+						firstValue: 'long-arrow-down',
+						secondValue: 'long-arrow-up',
+					},
+					'Previsão de umidade'
+				)}
+				<LineChart
+					title='Previsão de umidade (em %)'
+					data={{
+						colorPrim: '0, 174, 237',
+						colorSec: '0, 138, 237',
+					}}
+				/>
 			</div>
 		</div>
 	);

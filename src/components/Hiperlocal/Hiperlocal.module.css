@@ -231,3 +231,15 @@
 .maxIcon {
 	color: #ff6b6b;
 }
+
+.previsaoTitle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.5rem;
+	color: var(--primary-dark);
+	padding: 0 2% 1% 2%;
+	border-radius: 5px;
+	border-bottom: 1px solid var(--primary-green);
+	margin-bottom: 4%;
+}
