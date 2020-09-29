@@ -235,7 +235,8 @@ const Hiperlocal = (props) => {
 					'Previsão de temperatura'
 				)}
 				<LineChart
-					title='Previsão de temperatura (em ºC)'
+					title='Temperatura em (em ºC)'
+					page='Clima'
 					data={{ colorPrim: '255, 206, 8', colorSec: '237, 182, 0' }}
 				/>
 				{resumePrevisao(
@@ -300,7 +301,8 @@ const Hiperlocal = (props) => {
 					'Previsão de intensidade do vento'
 				)}
 				<LineChart
-					title='Previsão da intensidade do vento (em km/h)'
+					title='Intensidade do vento (em km/h)'
+					page='Clima'
 					data={{
 						colorPrim: '140, 207, 134',
 						colorSec: '99, 199, 103',
@@ -317,7 +319,8 @@ const Hiperlocal = (props) => {
 					'Previsão de umidade'
 				)}
 				<LineChart
-					title='Previsão de umidade (em %)'
+					title='Umidade (em %)'
+					page='Clima'
 					data={{
 						colorPrim: '0, 174, 237',
 						colorSec: '0, 138, 237',

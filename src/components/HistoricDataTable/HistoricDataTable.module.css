@@ -1,0 +1,95 @@
+.table {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 100%;
+	border-collapse: collapse;
+}
+
+.tableHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 96%;
+	background-color: var(--tertiary-dark);
+}
+
+.tableHeaderData {
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+	color: var(--primary-light);
+	border-right: 1px solid #888888;
+	font-size: 1.6rem;
+	padding: 1% 2%;
+}
+.tableHeaderData:first-child {
+	border-left: none;
+	width: 20%;
+}
+.tableHeaderData:last-child {
+	border-right: none;
+}
+
+.rowContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	width: 96%;
+}
+
+.orderButton {
+	border: none;
+	background-color: inherit;
+	color: var(--primary-green);
+	cursor: pointer;
+	margin-left: 4%;
+	outline: none !important;
+	font-size: 2rem;
+}
+
+.tableRow {
+	display: flex;
+	justify-content: center;
+	width: 96%;
+	border: 1px solid var(--quinary-light);
+	border-top: 0;
+	font-size: 1.7rem;
+}
+
+.oddRow {
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--secundary-light);
+	border-right: 1px solid var(--tertiary-light);
+	padding: 2% 2%;
+}
+.evenRow {
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2% 2%;
+	border-right: 1px solid var(--tertiary-light);
+}
+
+.oddRow.date,
+.evenRow.date {
+	width: 20%;
+}
+
+.desc {
+	padding-top: 5%;
+	color: var(--quaternary-light);
+	font-size: 1rem;
+}
