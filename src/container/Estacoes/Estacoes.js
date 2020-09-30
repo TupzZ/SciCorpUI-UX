@@ -202,9 +202,8 @@ class Estacoes extends Component {
 						<Mapa
 							defaultCenter={this.state.defaultCenter}
 							estacoes={this.state.estacoes}
+							selectedEstacao={this.state.selectedEstacao}
 							clicked={this.toggleOpen}
-							openInfoWindow={this.state.openInfoWindowId}
-							isOpen={this.state.isOpen}
 						/>
 					</Container>
 					<Container title='Situação das estações'>

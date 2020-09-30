@@ -54,6 +54,14 @@ const SearchContainer = (props) => {
 		<div className={styles.container}>
 			{rowTitle}
 			{rowDate}
+			<div className={styles.row}>
+				{props.gdA > 0 ? (
+					<h1 className={styles.gda}>
+						Graus-dia acumulados:{' '}
+						<span className={styles.gdaData}>{props.gdA}</span>
+					</h1>
+				) : null}
+			</div>
 		</div>
 	);
 };

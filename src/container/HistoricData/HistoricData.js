@@ -258,6 +258,7 @@ class HistoricData extends Component {
 		selectedEstacao: 0,
 		selectedWeather: 0,
 		selectedChart: 0,
+		grausDia: 94,
 		tableOrder: true,
 	};
 
@@ -315,6 +316,7 @@ class HistoricData extends Component {
 						toggleEstacao={this.toggleSelectedEstacao}
 						selectedEstacao={this.state.selectedEstacao}
 						estacoes={this.state.estacoes}
+						gdA={this.state.grausDia}
 					/>
 					<HistoricDataTable
 						selectedOrder={this.state.tableOrder}
@@ -325,10 +327,14 @@ class HistoricData extends Component {
 						toggleEstacao={this.toggleSelectedEstacao}
 						selectedEstacao={this.state.selectedEstacao}
 						estacoes={this.state.estacoes}
+						gdaSum={this.gdaSum}
 					/>
 				</Container>
 				<Container title='Gráficos comparativos'>
-					<ComparativeCharts />
+					<ComparativeCharts
+						selectedEstacao={this.state.selectedEstacao}
+						estacoes={this.state.estacoes}
+					/>
 				</Container>
 			</div>
 		);

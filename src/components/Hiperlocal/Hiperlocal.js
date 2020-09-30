@@ -258,6 +258,7 @@ const Hiperlocal = (props) => {
 				)}
 				<BarChart
 					title='Previsão de chuva (em mm)'
+					page='Clima'
 					data={{
 						first:
 							props.estacoes[props.selectedEstacao].rain === 5
