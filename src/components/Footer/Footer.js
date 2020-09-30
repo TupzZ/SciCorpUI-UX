@@ -10,17 +10,6 @@ const Footer = () => {
 			</div>
 			<div className={styles.infoContainer}>
 				<p className={styles.info}>
-					Exercício realizado para o processo de seleção da empresa{' '}
-					<a
-						href='https://scicrop.com/'
-						rel='noopener noreferrer'
-						target='_blank'
-						className={styles.link}
-					>
-						SciCrop®
-					</a>
-				</p>
-				<p className={styles.info}>
 					Projeto salvo no{' '}
 					<a
 						href='https://github.com/TupzZ/SciCorpUI-UX'
