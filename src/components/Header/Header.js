@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Icofont from 'react-icofont';
 import logo from '../../assets/images/logo-scicrop.png';
 import styles from './Header.module.css';
 
@@ -17,9 +16,6 @@ const Header = (props) => {
 				</Link>
 			</div>
 			<div className={styles.linksContainer}>
-				<Link to='/' className={styles.headerLink}>
-					HOME
-				</Link>
 				<Link to='/estacoes' className={styles.headerLink}>
 					ESTAÇÕES
 				</Link>
@@ -28,11 +24,6 @@ const Header = (props) => {
 				</Link>
 				<Link to='/dados-historicos' className={styles.headerLink}>
 					DADOS HISTÓRICOS
-				</Link>
-			</div>
-			<div className={styles.userContainer}>
-				<Link to='/user' className={styles.userFrame}>
-					<Icofont className={styles.userIcon} icon='user-alt-7' />
 				</Link>
 			</div>
 		</header>

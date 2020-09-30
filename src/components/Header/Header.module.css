@@ -1,6 +1,6 @@
 .header {
 	height: 60px;
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -8,7 +8,7 @@
 }
 
 .logoContainer {
-	width: 12%;
+	width: 20%;
 	height: 100%;
 	display: flex;
 	align-items: flex-end;
@@ -24,42 +24,35 @@
 }
 
 .linksContainer {
-	width: inherit;
+	width: 75%;
 	height: 100%;
 	display: flex;
 	align-items: center;
+	padding-right: 4%;
 	justify-content: flex-end;
 	border-bottom: 1px solid var(--tertiary-light);
 }
 
 .headerLink {
-	margin-right: 2%;
+	margin-right: 3%;
 	color: var(--primary-dark);
 	font-weight: 500;
 	font-size: 1.4rem;
 }
 
-.userContainer {
-	width: 12%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-bottom: 1px solid var(--tertiary-light);
-	border-left: 1px solid var(--tertiary-light);
+@media only screen and (min-width: 768px) {
+	.toggle {
+		display: none;
+	}
 }
 
-.userFrame {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--primary-green);
-	height: 3.7rem;
-	width: 3.7rem;
-	border-radius: 2rem;
-}
+@media only screen and (max-width: 768px) {
+	.logoContainer {
+		width: 25%;
+	}
 
-.userIcon {
-	font-size: 1.3rem;
-	color: white;
+	.headerLink {
+		margin-right: 3%;
+		font-size: 1.2rem;
+	}
 }
