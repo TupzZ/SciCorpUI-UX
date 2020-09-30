@@ -53,7 +53,7 @@ const Status = (props) => {
 				<div
 					className={index % 2 === 0 ? styles.oddRow : styles.evenRow}
 				>
-					<span>{data.autoVer}</span>
+					<span className={styles.autoVer}>{data.autoVer}</span>
 				</div>
 			</div>
 		);

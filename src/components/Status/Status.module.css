@@ -65,6 +65,10 @@
 	padding: 2% 2%;
 }
 
+.autoVer {
+	text-align: center;
+}
+
 .evenRow {
 	display: flex;
 	justify-content: center;
