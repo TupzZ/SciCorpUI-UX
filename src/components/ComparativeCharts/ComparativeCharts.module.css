@@ -29,3 +29,15 @@
 	border-bottom: 1px solid var(--primary-green);
 	margin-bottom: 4%;
 }
+
+@media only screen and (max-width: 768px) {
+	.dataTitle {
+		font-size: 2.5rem;
+	}
+}
+
+@media only screen and (max-width: 600pc) {
+	.dataTitle {
+		font-size: 1.7rem;
+	}
+}

@@ -16,7 +16,6 @@
 .hiperlocalContainer {
 	width: 80%;
 	margin: 3% 0;
-	min-height: 70vh;
 	border: 1px solid #d6d6d6;
 	border-radius: 15px;
 }
@@ -242,4 +241,56 @@
 	border-radius: 5px;
 	border-bottom: 1px solid var(--primary-green);
 	margin-bottom: 4%;
+}
+
+@media only screen and (max-width: 768px) {
+	.previsaoData {
+		font-size: 3rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.previsaoTitle {
+		font-size: 1.7rem;
+		padding: 0 4% 2% 4%;
+	}
+
+	.previsaoData {
+		font-size: 1.7rem;
+		padding: 0 4% 2% 4%;
+	}
+
+	.previsaoName {
+		font-size: 1.5rem;
+	}
+
+	.hiperlocalHeader {
+		font-size: 1.5rem;
+		padding: 4%;
+	}
+
+	.resumeImg {
+		height: 3rem;
+	}
+
+	.resumeName {
+		font-size: 1.2rem;
+	}
+
+	.uvIcon {
+		height: 1.3rem;
+	}
+
+	.radiationIcon,
+	.rainIcon,
+	.umityIcon,
+	.windIcon,
+	.tempIcon {
+		font-size: 1.5rem;
+	}
+
+	.data,
+	.dataTitle {
+		font-size: 1.5rem;
+	}
 }

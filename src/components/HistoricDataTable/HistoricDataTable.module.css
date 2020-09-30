@@ -93,3 +93,31 @@
 	color: var(--quaternary-light);
 	font-size: 1rem;
 }
+
+@media only screen and (max-width: 768px) {
+	.tableHeaderData {
+		font-size: 1.3rem;
+	}
+
+	.tableRow {
+		font-size: 1.4rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.table {
+		margin-bottom: 2%;
+	}
+
+	.tableHeaderData {
+		font-size: 0.8rem;
+	}
+
+	.tableRow {
+		font-size: 0.9rem;
+	}
+
+	.desc {
+		font-size: 0.7rem;
+	}
+}

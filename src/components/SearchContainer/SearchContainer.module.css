@@ -69,3 +69,35 @@
 	font-weight: 600;
 	color: var(--primary-green);
 }
+
+@media only screen and (max-width: 768px) {
+	.gda {
+		font-size: 1.7rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.gda {
+		font-size: 1.2rem;
+		padding: 5% 0 4% 0;
+	}
+
+	.title {
+		font-size: 1.3rem;
+		margin-top: 5%;
+	}
+
+	.datePicker {
+		font-size: 1rem;
+		width: 90%;
+		border-radius: 2px;
+	}
+
+	.submit {
+		font-size: 1.2rem;
+	}
+
+	.column {
+		width: calc(100% / 3);
+	}
+}

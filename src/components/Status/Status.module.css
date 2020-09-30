@@ -6,12 +6,14 @@
 	flex-wrap: wrap;
 	height: 100%;
 	border-collapse: collapse;
+	overflow-x: auto;
 }
 
 .tableHeader {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	flex-direction: row;
 	flex-wrap: wrap;
 	width: 96%;
@@ -49,6 +51,7 @@
 .tableRow {
 	display: flex;
 	justify-content: center;
+	text-align: center;
 	width: 96%;
 	border: 1px solid var(--quinary-light);
 	border-top: 0;
@@ -90,4 +93,26 @@
 	background-color: var(--primary-red);
 	border-radius: 5px;
 	padding: 5% 10%;
+}
+
+@media only screen and (max-width: 600px) {
+	.tableHeaderData {
+		font-size: 0.8rem;
+	}
+
+	.orderButton {
+		font-size: 1.5rem;
+	}
+
+	.tableRow {
+		font-size: 0.9rem;
+	}
+
+	.online {
+		border-radius: 3px;
+	}
+
+	.offline {
+		border-radius: 3px;
+	}
 }
