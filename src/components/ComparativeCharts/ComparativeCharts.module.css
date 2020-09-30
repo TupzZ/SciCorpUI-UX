@@ -36,7 +36,7 @@
 	}
 }
 
-@media only screen and (max-width: 600pc) {
+@media only screen and (max-width: 600px) {
 	.dataTitle {
 		font-size: 1.7rem;
 	}
