@@ -5,7 +5,6 @@ import 'react-datetime/css/react-datetime.css';
 import moment from 'moment';
 
 const SearchContainer = (props) => {
-	console.log(props.selectedEstacao);
 	var today = moment();
 	var valid = function (current) {
 		return current.isBefore(today);
